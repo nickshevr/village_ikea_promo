@@ -10,26 +10,31 @@ import result_4 from '../../images/Result/result_4.png';
 
 import * as styles from './styles.module.css';
 
-const Image = ({src}) => (
+const disabledViewStyle = {
+    display: 'none',
+  };
+  
+const noStyle = {};
+
+const Image = ({src, style}) => (
     <img
+        style={style}
         src={src}
         className={styles.image}
     />
 );
 
-const Final = () => {
+const Final = ({style}) => {
     const state = useContext(GlobalStateContext);
     const profile = Object.keys(state).sort((a, b) => state[a] - state[b] > 0 ? -1 : 1);
-    console.log(state, profile);
-
 
     return (
-        <React.Fragment>
-            {profile[1] === "1" && <Image src={result_1} />}
-            {profile[1] === "2" && <Image src={result_2} />}
-            {profile[1] === "3" && <Image src={result_3} />}
-            {profile[1] === "4" && <Image src={result_4} />}
-        </React.Fragment>
+        <div style={style}>
+            <Image src={result_1} style={profile[1] === "1" ? noStyle : disabledViewStyle}/>
+            <Image src={result_2} style={profile[1] === "2" ? noStyle : disabledViewStyle}/>
+            <Image src={result_3} style={profile[1] === "3" ? noStyle : disabledViewStyle}/>
+            <Image src={result_4} style={profile[1] === "4" ? noStyle : disabledViewStyle}/>
+        </div>
     )
 };
 

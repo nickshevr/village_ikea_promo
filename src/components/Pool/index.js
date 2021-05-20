@@ -10,7 +10,7 @@ import Image from '../Image';
 
 import {shuffleArray} from '../../utils';
 
-const FirstPool = ({images}) => {
+const FirstPool = ({images, style}) => {
     const dispatch = useContext(GlobalDispatchContext)
     const shuffledImages = shuffleArray(images);
 
@@ -20,7 +20,7 @@ const FirstPool = ({images}) => {
     };
 
     return (
-        <div className={styles.root}>
+        <div style={style} className={styles.root}>
             <Gallery>
                 {
                     shuffledImages.map(value => (

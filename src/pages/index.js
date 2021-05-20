@@ -14,18 +14,24 @@ import {
 
 import './styles.css'
 
+const disabledViewStyle = {
+  display: 'none',
+};
+
+const noStyle = {};
+
 const IndexPage = () => {
   const state = useContext(GlobalStateContext);
 
   return (
     <div id="main">
       <title>Village IKEA Promo</title>
-      {state.currentStep === 1 && (<Pool images={FIRST_IMAGES} />)}
-      {state.currentStep === 2 && (<Pool images={SECOND_IMAGES} />)}
-      {state.currentStep === 3 && (<Pool images={THIRD_IMAGES} />)}
-      {state.currentStep === 4 && (<Pool images={FOURTH_IMAGES} />)}
-      {state.currentStep === 5 && (<Pool images={FITH_IMAGES} />)}
-      {state.currentStep === 6 && (<Final />)}
+      <Pool images={FIRST_IMAGES} style={state.currentStep === 1 ? noStyle : disabledViewStyle} />
+      <Pool images={SECOND_IMAGES} style={state.currentStep === 2 ? noStyle : disabledViewStyle} />
+      <Pool images={THIRD_IMAGES} style={state.currentStep === 3 ? noStyle : disabledViewStyle} />
+      <Pool images={FOURTH_IMAGES} style={state.currentStep === 4 ? noStyle : disabledViewStyle} />
+      <Pool images={FITH_IMAGES} style={state.currentStep === 5 ? noStyle : disabledViewStyle} />
+      <Final style={state.currentStep === 6 ? noStyle : disabledViewStyle} />
     </div>
   )
 }
