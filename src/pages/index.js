@@ -18,7 +18,7 @@ const IndexPage = () => {
   const state = useContext(GlobalStateContext);
 
   return (
-    <div>
+    <div id="main">
       <title>Village IKEA Promo</title>
       {state.currentStep === 1 && (<Pool images={FIRST_IMAGES} />)}
       {state.currentStep === 2 && (<Pool images={SECOND_IMAGES} />)}

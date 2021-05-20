@@ -20,6 +20,8 @@ const Image = ({src}) => (
 const Final = () => {
     const state = useContext(GlobalStateContext);
     const profile = Object.keys(state).sort((a, b) => state[a] - state[b] > 0 ? -1 : 1);
+    console.log(state, profile);
+
 
     return (
         <React.Fragment>
