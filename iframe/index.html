@@ -1,0 +1,40 @@
+<div id='village_promo_800'>
+</div>
+<script>
+  var allowedOrigins = ['http://127.0.0.1:5500', 'http://localhost:4200', 'https://www.the-village.ru', 'https://old.the-village.ru'];
+  var isMobile = window.outerWidth < 600;
+  var mobileSrc = 'https://villageikeapromomaster.gatsbyjs.io/mobile';
+  var desktopSrc = 'https://villageikeapromomaster.gatsbyjs.io';
+  allowedOrigins.push(mobileSrc);
+  allowedOrigins.push(desktopSrc);
+
+  var ifrm = document.createElement("iframe");
+  ifrm.setAttribute("src", isMobile ? mobileSrc : desktopSrc);
+  ifrm.id = 'village_promo_ikea';
+  ifrm.style.width = "100%";
+  ifrm.style.height = isMobile ? "500px" : "700px";
+  ifrm.style.border = "none";
+  ifrm.scrolling = "no";
+
+  var place = document.getElementById('village_promo_ikea');
+
+  place.appendChild(ifrm);
+
+  window.addEventListener('message', function (e) {
+    if (!allowedOrigins.includes(e.origin)) {
+      return;
+    }
+    var payload = e.data !== '' ? JSON.parse(e.data) : {};
+    if (payload.method === 'set') {
+      var id = payload.data ? payload.data.id : null;
+      var height = payload.data ? payload.data.height : null;
+      
+      if (!id || !height) {
+        return;
+      }
+
+      var iframe = document.getElementById(id);
+      iframe.style.height = height;
+    }
+  });
+</script>
