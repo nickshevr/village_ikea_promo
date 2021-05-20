@@ -2,10 +2,8 @@ import React, {useContext} from "react"
 import {
   GlobalStateContext,
 } from "../context/GlobalContextProvider"
-
 import Pool from '../components/Pool';
 import Final from '../components/Final';
-
 import {
   FIRST_IMAGES,
   SECOND_IMAGES,
@@ -13,6 +11,8 @@ import {
   FOURTH_IMAGES,
   FITH_IMAGES,
 } from '../data/images';
+
+import './styles.css'
 
 const IndexPage = () => {
   const state = useContext(GlobalStateContext);
