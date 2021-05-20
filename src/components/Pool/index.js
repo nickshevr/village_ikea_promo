@@ -23,10 +23,11 @@ const FirstPool = ({images}) => {
         <div className={styles.root}>
             <Gallery>
                 {
-                    shuffledImages.map((value, key) => (
+                    shuffledImages.map(value => (
                         <Image
                             onClick={makeOnclick(value)}
                             src={value}
+                            key={value}
                         />
                     ))
                 }

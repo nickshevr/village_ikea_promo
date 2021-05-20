@@ -14,7 +14,6 @@ const initialState = {
 };
 
 function reducer(state, action) {
-    console.log(action);
   switch (action.type) {
     case 'add':
         const id = MAPPING[action.payload];
