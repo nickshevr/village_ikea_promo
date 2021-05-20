@@ -19,15 +19,14 @@ const Image = ({src}) => (
 
 const Final = () => {
     const state = useContext(GlobalStateContext);
-    const profile = Object.keys(state).sort((a, b) => console.log(a, b));
-    console.log(profile);
+    const profile = Object.keys(state).sort((a, b) => state[a] - state[b] > 0 ? -1 : 1);
 
     return (
         <React.Fragment>
-            {profile[0] === "1" && <Image src={result_1} />}
-            {profile[0] === "2" && <Image src={result_2} />}
-            {profile[0] === "3" && <Image src={result_3} />}
-            {profile[0] === "4" && <Image src={result_4} />}
+            {profile[1] === "1" && <Image src={result_1} />}
+            {profile[1] === "2" && <Image src={result_2} />}
+            {profile[1] === "3" && <Image src={result_3} />}
+            {profile[1] === "4" && <Image src={result_4} />}
         </React.Fragment>
     )
 };
