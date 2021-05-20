@@ -1,27 +1,27 @@
-import a from "../images/Pool_1/1-1.png";
-import b from "../images/Pool_1/1-2.png";
-import c from "../images/Pool_1/1-3.png";
-import d from "../images/Pool_1/1-4.png";
+import a from "../images/Pool_1/1-1.jpg";
+import b from "../images/Pool_1/1-2.jpg";
+import c from "../images/Pool_1/1-3.jpg";
+import d from "../images/Pool_1/1-4.jpg";
 
-import a_a from "../images/Pool_2/2-1.png";
-import b_a from "../images/Pool_2/2-2.png";
-import c_a from "../images/Pool_2/2-3.png";
-import d_a from "../images/Pool_2/2-4.png";
+import a_a from "../images/Pool_2/2-1.jpg";
+import b_a from "../images/Pool_2/2-2.jpg";
+import c_a from "../images/Pool_2/2-3.jpg";
+import d_a from "../images/Pool_2/2-4.jpg";
 
-import a_b from "../images/Pool_3/3-1.png";
-import b_b from "../images/Pool_3/3-2.png";
-import c_b from "../images/Pool_3/3-3.png";
-import d_b from "../images/Pool_3/3-4.png";
+import a_b from "../images/Pool_3/3-1.jpg";
+import b_b from "../images/Pool_3/3-2.jpg";
+import c_b from "../images/Pool_3/3-3.jpg";
+import d_b from "../images/Pool_3/3-4.jpg";
 
-import a_c from "../images/Pool_4/4-1.png";
-import b_c from "../images/Pool_4/4-2.png";
-import c_c from "../images/Pool_4/4-3.png";
-import d_c from "../images/Pool_4/4-4.png";
+import a_c from "../images/Pool_4/4-1.jpg";
+import b_c from "../images/Pool_4/4-2.jpg";
+import c_c from "../images/Pool_4/4-3.jpg";
+import d_c from "../images/Pool_4/4-4.jpg";
 
-import a_d from "../images/Pool_5/5-1.png";
-import b_d from "../images/Pool_5/5-2.png";
-import c_d from "../images/Pool_5/5-3.png";
-import d_d from "../images/Pool_5/5-4.png";
+import a_d from "../images/Pool_5/5-1.jpg";
+import b_d from "../images/Pool_5/5-2.jpg";
+import c_d from "../images/Pool_5/5-3.jpg";
+import d_d from "../images/Pool_5/5-4.jpg";
 
 export const FIRST_IMAGES = [a, b, c, d];
 
