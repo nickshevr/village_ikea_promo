@@ -20,6 +20,18 @@ const disabledViewStyle = {
 
 const noStyle = {};
 
+const styles = [{
+  background: '#9cd5a6'
+}, {
+  background: '#c398c4',
+}, {
+  background: '#9cd4d5',
+}, {
+  background: '#9cd5a6',
+}, {
+  background: '#e8dfc6',
+}];
+
 const IndexPage = () => {
   const state = useContext(GlobalStateContext);
 

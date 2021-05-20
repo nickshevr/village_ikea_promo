@@ -3,5 +3,12 @@
     max-width: 50%;
     height: auto;
     padding: 0px;
-    width: calc(50% * (1/2) - 10px - 1px)
+    width: calc(50% * (1/2) - 10px - 1px);
+    margin: 5px;
+}
+
+@media(max-width: 480px) {
+    .image {
+        margin: 2px;
+    }
 }
