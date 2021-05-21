@@ -7,20 +7,19 @@
   var desktopSrc = 'https://villageikeapromomaster.gatsbyjs.io';
   allowedOrigins.push(mobileSrc);
   allowedOrigins.push(desktopSrc);
-
-  var ifrm = document.createElement("iframe");
-  ifrm.setAttribute("src", isMobile ? mobileSrc : desktopSrc);
-  ifrm.id = 'village_promo_ikea';
-  ifrm.style.width = "100%";
-  ifrm.style.height = isMobile ? "500px" : "700px";
-  ifrm.style.border = "none";
-  ifrm.scrolling = "no";
-
   var place = document.getElementById('village_promo_ikea');
 
-  place.appendChild(ifrm);
+  if (place.children.length === 0) {
+    var ifrm = document.createElement("iframe");
+    ifrm.setAttribute("src", isMobile ? mobileSrc : desktopSrc);
+    ifrm.id = 'village_promo_ikea_frame';
+    ifrm.style.width = "100%";
+    ifrm.style.height = isMobile ? "500px" : "700px";
+    ifrm.style.border = "none";
+    ifrm.scrolling = "no";
+    place.appendChild(ifrm);
 
-  window.addEventListener('message', function (e) {
+    window.addEventListener('message', function (e) {
     if (!allowedOrigins.includes(e.origin)) {
       return;
     }
@@ -37,4 +36,5 @@
       iframe.style.height = height;
     }
   });
+  }
 </script>
