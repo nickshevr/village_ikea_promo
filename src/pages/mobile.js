@@ -24,7 +24,7 @@ const IndexPage = () => {
   const state = useContext(GlobalStateContext);
 
   return (
-    <div id="main">
+    <div id="main_mobile">
       <title>Village IKEA Promo</title>
       <Pool images={FIRST_IMAGES} style={state.currentStep === 1 ? noStyle : disabledViewStyle} />
       <Pool images={SECOND_IMAGES} style={state.currentStep === 2 ? noStyle : disabledViewStyle} />
