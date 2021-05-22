@@ -7,13 +7,14 @@ import result_1 from '../../images/Result/result_1.png';
 import result_2 from '../../images/Result/result_2.png';
 import result_3 from '../../images/Result/result_3.png';
 import result_4 from '../../images/Result/result_4.png';
+import Hyperlinks from '../Hyperlinks';
 
 import * as styles from './styles.module.css';
 
 const disabledViewStyle = {
     display: 'none',
   };
-  
+
 const noStyle = {};
 
 const Image = ({src, style}) => (
@@ -27,6 +28,7 @@ const Image = ({src, style}) => (
 const Final = ({style}) => {
     const state = useContext(GlobalStateContext);
     const profile = Object.keys(state).sort((a, b) => state[a] - state[b] > 0 ? -1 : 1);
+    const isEnded = state.currentStep === 6;
 
     return (
         <div style={style}>
@@ -34,6 +36,7 @@ const Final = ({style}) => {
             <Image src={result_2} style={profile[1] === "2" ? noStyle : disabledViewStyle}/>
             <Image src={result_3} style={profile[1] === "3" ? noStyle : disabledViewStyle}/>
             <Image src={result_4} style={profile[1] === "4" ? noStyle : disabledViewStyle}/>
+            {isEnded && <Hyperlinks profile={profile[1]}/>}
         </div>
     )
 };

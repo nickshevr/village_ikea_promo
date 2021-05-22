@@ -1,0 +1,24 @@
+.root {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.link {
+    color: black;
+}
+
+.url {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.text {
+    margin: 0;
+}
+
