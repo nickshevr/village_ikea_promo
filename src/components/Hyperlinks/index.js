@@ -1,6 +1,6 @@
 import React from 'react';
 
-import TEXTS from '../../data/text';
+import TEXTS from '../../data/links';
 
 import * as styles from './styles.module.css';
 
