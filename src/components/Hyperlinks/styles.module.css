@@ -1,21 +1,22 @@
 .root {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-content: center;
     align-items: center;
-    flex-wrap: nowrap;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
 }
 
 .link {
     color: black;
+    font-size: 12px;
 }
 
 .url {
     display: flex;
     flex-direction: row;
     align-items: center;
-    margin-top: 6px;
+    margin: 2px;
+    font-size: 12px;
 }
 
 .text {

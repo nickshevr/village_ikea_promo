@@ -4,13 +4,13 @@ import TEXTS from '../../data/links';
 
 import * as styles from './styles.module.css';
 
-const Link = ({href, idx, text}) => (
+const Link = ({href, idx, text, lastIdx}) => (
     <div className={styles.url}>
         <p className={styles.text}>
-            {idx + 1}.
+            {idx + 1} &mdash; &nbsp;
         </p>
         <a href={href} target='_blank' className={styles.link}>
-            {text}
+            {text}{lastIdx !== idx + 1 && ','}
         </a>
     </div>
 );
@@ -22,7 +22,7 @@ const Final = ({profile}) => {
         <div className={styles.root}>
             {
                 links.map(({text, url}, i) => (
-                    <Link key={text} text={text} href={url} idx={i} />
+                    <Link key={text} text={text} href={url} idx={i} lastIdx={links.length}/>
                 ))
             }
         </div>

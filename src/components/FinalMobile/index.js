@@ -32,7 +32,7 @@ const TextInfo = ({profile}) => {
     const {title, text} = TEXTS[Number(profile) - 1];
 
     return (
-        <div>
+        <div className={styles.textInfo}>
             <Title>
                 {title}
             </Title>
