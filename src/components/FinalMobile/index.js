@@ -3,10 +3,10 @@ import React, {useContext} from 'react';
 import {
   GlobalStateContext,
 } from "../../context/GlobalContextProvider"
-import result_1 from '../../images/Result/result_1.png';
-import result_2 from '../../images/Result/result_2.png';
-import result_3 from '../../images/Result/result_3.png';
-import result_4 from '../../images/Result/result_4.png';
+import result_1 from '../../images/Result/result_mobile_1.jpg';
+import result_2 from '../../images/Result/result_mobile_2.jpg';
+import result_3 from '../../images/Result/result_mobile_3.jpg';
+import result_4 from '../../images/Result/result_mobile_4.jpg';
 import Hyperlinks from '../Hyperlinks';
 
 import * as styles from './styles.module.css';
